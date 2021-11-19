@@ -1,26 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <Recipes :recipes="recipesJson" />
+  <van-button type="primary">Primary</van-button>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Recipes from "./components/recipe/Recipes.vue";
+import recipesJson from "./assets/recipes.json";
 
 export default {
   name: "App",
+  data() {
+    return {
+      recipesJson: recipesJson,
+    };
+  },
   components: {
-    HelloWorld,
+    Recipes,
   },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
