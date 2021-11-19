@@ -1,0 +1,12 @@
+﻿{
+  "recipe": {
+    "title": "Title",
+    "ingredients": "Ingredients",
+    "instructions": "Instructions",
+    "time": "Time",
+    "difficulty": "Difficulty",
+    "servings": "Servings",
+    "author": "Author",
+    "rating": "Rating"
+  }
+}
