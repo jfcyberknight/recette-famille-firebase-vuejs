@@ -1,0 +1,10 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": "!data.exists()",
+    "$boiteRecette": {
+      ".write": "auth != null && (!data.exists() || data.child('chef').val() === auth.uid)",
+      ".read": true
+    }
+  }
+}
