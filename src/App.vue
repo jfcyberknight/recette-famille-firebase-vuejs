@@ -1,10 +1,9 @@
 <template>
-  <Recipes :recipes="recipesJson" />
-  <van-button type="primary">Primary</van-button>
+  <RecipesPage :recipes="recipesJson" />
 </template>
 
 <script>
-import Recipes from "./components/recipe/Recipes.vue";
+import RecipesPage from "./pages/RecipesPage.vue";
 import recipesJson from "./assets/recipes.json";
 
 export default {
@@ -15,7 +14,7 @@ export default {
     };
   },
   components: {
-    Recipes,
+    RecipesPage,
   },
 };
 </script>
