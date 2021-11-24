@@ -1,4 +1,14 @@
-import Vant, { Col, Image as VanImage, Lazyload, Row } from "vant";
+import Vant, {
+  Col,
+  Image as VanImage,
+  Lazyload,
+  Row,
+  Field,
+  Switch,
+  Card,
+  Form,
+  Button,
+} from "vant";
 import "vant/lib/index.css";
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -11,4 +21,9 @@ createApp(App)
   .use(Lazyload)
   .use(Col)
   .use(Row)
+  .use(Field)
+  .use(Switch)
+  .use(Card)
+  .use(Form)
+  .use(Button)
   .mount("#app");

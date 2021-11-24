@@ -7,6 +7,10 @@
     "difficulty": "Difficulté",
     "servings": "Portion",
     "author": "Auteur",
-    "rating": "Évaluation"
+    "rating": "Évaluation",
+    "actions": {
+      "edit": "Éditer",
+      "save": "Sauvegarder"
+    }
   }
 }
