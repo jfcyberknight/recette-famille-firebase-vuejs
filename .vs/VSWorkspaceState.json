@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.github",
-    "\\.github\\workflows",
     "\\src",
     "\\src\\assets",
     "\\src\\components",
-    "\\src\\components\\Recipe"
+    "\\src\\components\\recipe",
+    "\\src\\locales",
+    "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\assets\\recipes.json",
+  "SelectedNode": "\\src\\locales\\en.json",
   "PreviewInSolutionExplorer": false
 }

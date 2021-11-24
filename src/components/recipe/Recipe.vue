@@ -1,28 +1,82 @@
 <template>
-  <div>
-    <p>{{ $t("recipe.title") }} : {{ recipe.title }}</p>
-    <p>{{ $t("recipe.ingredients") }} : {{ recipe.ingredients }}</p>
-    <p>{{ $t("recipe.instructions") }} : {{ recipe.instructions }}</p>
-    <p>{{ $t("recipe.time") }} : {{ recipe.time }}</p>
-    <p>{{ $t("recipe.difficulty") }} : {{ recipe.difficulty }}</p>
-    <p>{{ $t("recipe.servings") }} : {{ recipe.servings }}</p>
-    <p>{{ $t("recipe.rating") }} : {{ recipe.rating }}</p>
+  <van-row>
+    <van-col offset="12" span="12">
+      <h2>{{ $t("recipe.actions.edit") }}</h2>
+      <van-switch v-model="isEditableRecipe" />
+    </van-col>
+  </van-row>
+  <van-row>
+    <van-col>
+      <van-field
+        v-model="bindingRecipe.title"
+        :label="$t('recipe.title')"
+        placeholder="Text"
+        :readonly="!isEditableRecipe"
+        autosize
+        show-word-limit
+        maxlength="250"
+        input-align="right"
+      />
+    </van-col>
+  </van-row>
 
-    <van-image
-      round
-      width="400"
-      height="400"
-      fit="contain"
-      lazy-load
-      :src="recipe.image"
-    />
-  </div>
+  <van-field
+    v-model="bindingRecipe.ingredients"
+    :label="$t('recipe.ingredients')"
+    placeholder="Text"
+    :readonly="!isEditableRecipe"
+  />
+  <van-field
+    v-model="bindingRecipe.instructions"
+    :label="$t('recipe.instructions')"
+    placeholder="Text"
+    :readonly="!isEditableRecipe"
+  />
+  <van-field
+    v-model="bindingRecipe.time"
+    :label="$t('recipe.time')"
+    placeholder="Text"
+    :readonly="!isEditableRecipe"
+  />
+  <van-field
+    v-model="bindingRecipe.difficulty"
+    :label="$t('recipe.difficulty')"
+    placeholder="Text"
+    :readonly="!isEditableRecipe"
+  />
+  <van-field
+    v-model="bindingRecipe.servings"
+    :label="$t('recipe.servings')"
+    placeholder="Text"
+    :readonly="!isEditableRecipe"
+  />
+  <van-field
+    v-model="bindingRecipe.rating"
+    :label="$t('recipe.rating')"
+    placeholder="Text"
+    :readonly="!isEditableRecipe"
+  />
+
+  <van-image
+    round
+    width="400"
+    height="400"
+    fit="contain"
+    lazy-load
+    :src="bindingRecipe.image"
+  />
 </template>
 
 <script>
 export default {
   props: {
     recipe: Object,
+  },
+  data() {
+    return {
+      isEditableRecipe: false,
+      bindingRecipe: this.recipe,
+    };
   },
 };
 </script>
