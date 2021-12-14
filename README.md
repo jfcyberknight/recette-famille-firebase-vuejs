@@ -2,23 +2,87 @@
 
 ## Project setup
 ```
-pnpm install
+cd src
+npm install
 ```
 
-### Compiles and hot-reloads for development
 ```
-pnpm run serve
-```
-
-### Compiles and minifies for production
-```
-pnpm run build
+npm run serve
 ```
 
-### Lints and fixes files
 ```
-pnpm run lint
+npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+npm run lint
+```
+
+```
+npm run i18n:report
+```
+
+### How to Vue Cli (Easy compile and compact my application)
+```
+npm install -g @vue/cli
+```
+
+```
+npm update -g @vue/cli
+```
+
+```
+npm install -g @vue/cli @vue/cli-service-global
+```
+
+Permet de configurer par vue cli UI, les packages de ton projets
+```
+vue ui
+```
+
+```
+vue serve
+```
+
+```
+vue serve MyComponent.vue
+```
+
+```
+vue build MyComponent.vue
+```
+### How to Firebase  (Deploy my application)
+Install firebase tools 
+```
+npm install -g firebase-tools
+```
+
+List all firebase command
+```
+firebase
+```
+
+Initialized firebase
+```
+firebase init
+```
+
+Initialized all local emulators for firebase development
+```
+firebase init emulators
+```
+
+Serve your application
+```
+firebase serve
+```
+
+Build your application
+```
+firebase build
+```
+
+Direct deploy
+```
+firebase deploy
+```
